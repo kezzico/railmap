@@ -46,7 +46,7 @@ class RailRoute {
 //
 class RailStation {
   // a coordinate on the map
-  List<int> coordinate;
+  List<double> coordinate;
   final String name;
 
   // a constructor that takes an array of x and y then creates a RailCoordinate

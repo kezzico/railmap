@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Online FlowChart &amp; Diagrams Editor - Mermaid Live Editor</title>
+    <meta
+      name="og:image"
+      content="https://github.com/mermaid-js/mermaid/raw/develop/img/header.png" />
+    <link rel="canonical" href="https://mermaid.live" />
+    <meta
+      name="description"
+      content="Simplify documentation and avoid heavy tools. Open source Visio Alternative. Commonly used for explaining your code! Mermaid is a simple markdown-like script language for generating charts from text via javascript." />
+    <link rel="icon" type="image/png" href="./favicon.svg" />
+    <link rel="mask-icon" href="./favicon.svg" color="#000000" />
+    <meta name="theme-color" content="#6366F1" />
+    <link rel="manifest" href="./manifest.json" />
+    
+		<link rel="modulepreload" href="./_app/immutable/entry/start.t8oVkn1A.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/dhEfOt3W.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/D6Wd-nLU.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BclyZF8w.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.u7qgIS5l.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CYxEUMFV.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Cu5700Tc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BrkBtR2z.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bg9kRutz.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/4ZWc0LKR.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BCv6l8V1.js">
+  </head>
+  <body style="overflow: hidden">
+    <div id="svelte">
+			<script>
+				{
+					__sveltekit_sqihct = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.t8oVkn1A.js"),
+						import("./_app/immutable/entry/app.u7qgIS5l.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+  </body>
+</html>

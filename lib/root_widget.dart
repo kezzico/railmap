@@ -3,8 +3,9 @@ import 'package:provider/provider.dart';
 import 'package:railmap/railmap.dart';
 import 'package:railmap/railmap_widget.dart';
 import 'package:railmap/railmap_generated.dart';
-
+import 'package:railmap/railmap_loader.dart';
 import 'package:railmap/root_widget_state.dart';
+import 'package:railmap/railmap_loader.dart';
 
 class RailTrackerRootWidget extends StatelessWidget {
   const RailTrackerRootWidget({super.key});
@@ -15,9 +16,7 @@ class RailTrackerRootWidget extends StatelessWidget {
 
     const goldenratioinverse = 0.618;
 
-    double splitHeight = screensize.height - 1;
-
-    // print("splitHeight: ${splitHeight}");
+    double splitHeight = screensize.height * 1;
 
     return ChangeNotifierProvider<RootWidgetState>(
       create: (_) => RootWidgetState(),
@@ -41,16 +40,27 @@ class _TopWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screensize = MediaQuery.sizeOf(context);
+    Size mapsize = Size(screensize.width, height);
 
-    RailMap map = generatedRailmap();
-
-    return Positioned(
-      top: 0,
-      left: 0,
-      right: 0,
-      height: height,
-      child: RailMapWidget(size: Size(screensize.width, height), map: map),
-    );
+    return RailmapLoader(onLoad: (map) {
+      return Positioned(
+          top: 0,
+          left: 0,
+          right: 0,
+          height: height,
+          child: RailMapWidget(size: mapsize, map: map));
+    }, load: () {
+      return Positioned(
+        top: 0,
+        left: 0,
+        right: 0,
+        height: height,
+        child: Container(
+          color: Colors.blue,
+          child: Center(child: CircularProgressIndicator()),
+        ),
+      );
+    });
   }
 }
 

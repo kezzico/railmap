@@ -60,8 +60,7 @@ class _RailMapWidgetState extends State<RailMapWidget> {
           ),
           SvgMap(mapsize: mapsize, offset: widget.pan, scale: widget.scale),
           CustomPaint(
-            painter: RailmapTrackPainter(
-                center: mapcenter, railmap: widget.map, scale: widget.scale),
+            painter: RailmapTrackPainter(railmap: widget.map, scale: widget.scale),
           ),
         ],
       ),
